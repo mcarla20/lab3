@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<style>
+body {font-family: "Times New Roman", Times, serif;}
+form {border: 3px solid #f1f1f1;}
+.item4{
+   position: fixed;
+   height:60px;
+   width:100%;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: blue;
+   color: white;
+   text-align: center;
+
+}
+span {
+  text-align: center;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #1E90FF;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #8B0000;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 640px;
+    height:400px;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid;
+}
+p
+{
+  font-weight: bold;
+}
+
+th, td {
+    text-align: left;
+    
+}
+td {
+  background-color: #87CEFA;
+}
+tr{
+  background-color:#4169E1;
+}
+.item1 { grid-area: header; }
+.item2 { grid-area: main; }
+.item3 { grid-area: right; }
+.item4 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  }
+
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="item1"><div class="navbar">
+  <a class="active" href="home.html">Home</a> 
+  <a href="profile.html">Profile</a> 
+  <a href="about.html">About</a> 
+  <a href="contact.html">Contact</a>
+</div></div>
+  <div class="item2"><h2>Login Form</h2>
+
+<form action="/action_page.php">
+  <div class="imgcontainer">
+    <img src="https://firstsiteguide.com/wp-content/uploads/2017/09/login-form-anywhere-wordpress-1-640x400.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" pattern=".+@yahoo.com" size="30" required>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <p>Please select your preferred contact method:</p>
+       <div>
+        <input type="radio" id="contactChoice1" name="contact" value="email">
+        <label for="contactChoice1"> Email</label>
+
+        <input type="radio" id="contactChoice2" name="contact" value="phone">
+        <label for="contactChoice2">Phone</label>
+
+        <input type="radio" id="contactChoice3" name="contact" value="mail">
+        <label for="contactChoice3">Mail</label>
+       </div> 
+       <div>
+        <button type="submit">Submit</button>
+       </div>
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form></div>  
+  <div class="item3"><p>Orar:</p>
+<table>
+  <tr>
+    <th>Luni</th>
+    <th>Marti</th>
+    <th>Miercuri</th>
+    <th>Joi</th>
+    <th>Vineri</th>
+  </tr>
+  <tr>
+    <td>Romana</td>
+    <td>Chimie</td>
+    <td>Fizica</td>
+    <td>Istorie</td>
+    <td>Algebra</td>
+  </tr>
+  <tr>
+    <td>Engleza</td>
+    <td>Fizica</td>
+    <td>Informatica</td>
+    <td>Rusa</td>
+    <td>Biologie</td>
+  </tr>
+  <tr>
+    <td>Franceza</td>
+    <td>Algebra</td>
+    <td>Geometrie</td>
+    <td>Muzica</td>
+    <td>Desen</td>
+  </tr></div>
+  <div class="item4">
+  <span>Footer</span>
+</div>
+</div>
+</div>
+</body>
+</html>
